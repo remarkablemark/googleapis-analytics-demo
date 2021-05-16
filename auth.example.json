@@ -1,0 +1,4 @@
+{
+  "private_key": "-----BEGIN PRIVATE KEY-----\nabc123\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account-name@project-id-123456.iam.gserviceaccount.com"
+}
