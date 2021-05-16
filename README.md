@@ -22,6 +22,50 @@ Install the dependencies:
 npm install
 ```
 
+## Authentication
+
+Login to [Google Cloud Platform](https://console.cloud.google.com/). Agree to the **Terms of Service** if you haven't already.
+
+Create a [New Project](https://console.cloud.google.com/projectcreate) with a **Project name** and **Project ID**.
+
+Enable the [Google Analytics API](https://console.cloud.google.com/marketplace/product/google/analytics.googleapis.com).
+
+Go to [Credentials](https://console.cloud.google.com/apis/credentials) and create a [Service account](https://console.cloud.google.com/iam-admin/serviceaccounts/create) credential, which enables server-to-server, app-level authentication using robot accounts. Fill in the **Service account name** and **Service account ID** and click **Done**.
+
+In [Credentials](https://console.cloud.google.com/apis/credentials), look for **Service Accounts** and click the newly created **Email**. Click **Keys** > **Add Key** > **Create new key** > **Key type** > **JSON** > **Create**. THe private key, which allows access to your cloud resources, will be saved to your computer.
+
+Move the key to the project directory:
+
+```sh
+mv path/to/project-id-abcdef123456.json auth.json
+```
+
+Only `private_key` and `client_email` are necessary for JWT authorization. The values are similar to `auth.example.json`:
+
+```json
+{
+  "private_key": "-----BEGIN PRIVATE KEY-----\nabc123\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account-name@project-id-123456.iam.gserviceaccount.com"
+}
+```
+
+Alternatively, the keys can be set in `.env`. The values are similar to `.env.example`:
+
+```sh
+CLIENT_EMAIL="service-account-name@project-id-123456.iam.gserviceaccount.com"
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nabc123\n-----END PRIVATE KEY-----\n"
+```
+
+Open [Google Analytics](https://analytics.google.com/analytics/web/) and go to **Admin** > **View Settings** and copy the **View ID**.
+
+Set it in `.env`, where the value is similar to `.env.example`:
+
+```sh
+VIEW_ID="12345678"
+```
+
+Go back to **Admin** and go to **View User Management** and in **View permissions**, press the **+** to **Add users** and add the service account email (`client_email`).
+
 ## Run
 
 ### `npm start`
