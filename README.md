@@ -30,7 +30,7 @@ Create a [New Project](https://console.cloud.google.com/projectcreate) with a **
 
 Enable the [Google Analytics API](https://console.cloud.google.com/marketplace/product/google/analytics.googleapis.com).
 
-Go to [Credentials](https://console.cloud.google.com/apis/credentials) and create a [Service account](https://console.cloud.google.com/iam-admin/serviceaccounts/create) credential, which enables server-to-server, app-level authentication using robot accounts. Fill in the **Service account name** and **Service account ID** and click **Done**.
+Go to [Credentials](https://console.cloud.google.com/apis/credentials) and create a [Service account](https://console.cloud.google.com/iam-admin/serviceaccounts/create) credential, which enables [server-to-server, app-level authentication](https://cloud.google.com/docs/authentication/production) using robot accounts. Fill in the **Service account name** and **Service account ID** and click **Done**.
 
 In [Credentials](https://console.cloud.google.com/apis/credentials), look for **Service Accounts** and click the newly created **Email**. Click **Keys** > **Add Key** > **Create new key** > **Key type** > **JSON** > **Create**. The private key, which allows access to your cloud resources, will be saved to your computer.
 
