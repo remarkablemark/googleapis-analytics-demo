@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@googleapis/analytics": "^2.0.0"
+    "@googleapis/analytics": "^2.0.0",
+    "dotenv": "^9.0.2"
   }
 }
