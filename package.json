@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@googleapis/analytics": "^2.0.0"
+  }
+}
