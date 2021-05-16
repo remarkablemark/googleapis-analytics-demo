@@ -1,5 +1,7 @@
 # googleapis-analytics-demo
 
+![GitHub last commit](https://img.shields.io/github/last-commit/remarkablemark/googleapis-analytics-demo)
+
 Demo of the [Google Analytics API](https://www.npmjs.com/package/@googleapis/analytics).
 
 ## Prerequisites
